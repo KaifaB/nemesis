@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  color: white;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.background {
+  background: url("./img/background.jpg");
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.nav {
+  background-color: black;
+  height: 160px;
+  padding: 6px 10px;
+  width: 100%;
+  z-index:2;
+}
+.nav div {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+ul {
+  display: flex;
+  height: 20%;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.nav li {
+  color: white;
+  padding: 0 12px;
+  width: auto;
+}
+
+.nav :nth-child(1){
+  padding: 0;
+}
+
+.phases {
+  display: flex;
+  justify-content: space-around;
+}
