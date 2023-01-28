@@ -1,8 +1,23 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Column from './Components/Column'
+import results from './Objects/Tasklist'
+//import { db } from './Database/firebase'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const column = results.map((curr,key) => {
+    return curr[key]
+  })
+  //read
+  // useEffect(() => {
+  //   onValue(ref(db), snapshot => {
+  //     const data = snapshot.val();
+  //     if(data !== null){
+        
+  //     }
+  //   }
+  // })
+  console.log(column)
   return (
     <div className="App">
       <div className="background">
@@ -24,14 +39,9 @@ function App() {
             </ul>
           </div>
         </div>
-        <ul className='phases'>
-          <li>Groomed</li>
-          <li>In Progress</li>
-          <li>In Review</li>
-          <li>In QA</li>
-          <li>Ready to Deploy</li>
-          <li>Complete</li>
-        </ul>
+        <div className='column-container'>
+          <Column name="Groom" tasks={column}/>
+        </div>
       </div>
     </div>
   )
