@@ -9,6 +9,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase
 const firebaseConfig = {
   apiKey: "AIzaSyDthSGPixi3EGDsAzpv6ImFkLrq9h048vA",
   authDomain: "nemesis-c39e5.firebaseapp.com",
+  databaseURL: "https://nemesis-c39e5-default-rtdb.firebaseio.com",
   projectId: "nemesis-c39e5",
   storageBucket: "nemesis-c39e5.appspot.com",
   messagingSenderId: "242297482579",

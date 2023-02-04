@@ -4,20 +4,8 @@ import results from './Objects/Tasklist'
 //import { db } from './Database/firebase'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const column = results.map((curr,key) => {
-    return curr[key]
-  })
-  //read
-  // useEffect(() => {
-  //   onValue(ref(db), snapshot => {
-  //     const data = snapshot.val();
-  //     if(data !== null){
-        
-  //     }
-  //   }
-  // })
-  console.log(column)
+
+  const [data, setData] = useState(results);
   return (
     <div className="App">
       <div className="background">
@@ -40,7 +28,9 @@ function App() {
           </div>
         </div>
         <div className='column-container'>
-          <Column name="Groom" tasks={column}/>
+          {data.map((curr, key) => {
+            return <Column name="Groom" setData={setData} tasks={curr} key={key}/>
+          })}
         </div>
       </div>
     </div>

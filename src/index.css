@@ -85,17 +85,22 @@ ul {
 }
 
 .task h1{
-  font-size: 14px;
+  font-size: 18px;
   height: 18px;
 }
 .task p{
   text-align: left;
-  font-size: 12px;
+  font-size: 14px;
   margin: 4px 0;
 }
 
 .attributes {
+  font-size: 12px;
   margin-top: 20px;
   display: flex;
   color:aliceblue;
+}
+
+.dotted{
+  border: 2px red dotted !important;
 }
